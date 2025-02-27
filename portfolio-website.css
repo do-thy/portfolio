@@ -1,0 +1,41 @@
+.navbar {
+  width: 50em;
+  border: 1px solid;
+  border-radius: 12em;
+  margin-inline: auto;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row; /* sets main axis */
+  justify-content: space-evenly; /* aligns content on the main axis */
+}
+
+.navbar li{
+  padding: 2em;
+  list-style-type: none;
+  display: inline;
+  overflow: hidden;
+  font-family: "Inconsolata";
+  font-style: normal;
+}
+
+.content-card {
+  border-radius: 2em;
+  margin-top: 5em;
+  width: 40em;
+  height: 40rem;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* aligns content on the opposite axis */
+  margin-inline: auto;
+}
+
+.content-card h1, h2,h3 {
+  font-family: "Josefin Sans";
+  font-style: normal;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
