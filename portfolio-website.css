@@ -1,40 +1,80 @@
+/* Navigation bar border and position */
 .navbar {
   width: 50em;
-  border: 1px solid;
+  border: 2px solid;
   border-radius: 12em;
   margin-inline: auto;
   margin-top: 2em;
   display: flex;
   flex-direction: row; /* sets main axis */
   justify-content: space-evenly; /* aligns content on the main axis */
+  align-items: center; /* aligns content on the opposite axis */
 }
 
-.navbar li{
+/* Flex display somehow enables the animation */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: -15px;
+} 
+
+/* Navigation bar text styling and position */
+.navbar li {
   padding: 2em;
   list-style-type: none;
   display: inline;
   overflow: hidden;
   font-family: "Inconsolata";
   font-style: normal;
+  transition: transform 0.7s;
 }
 
+/* Navigation bar text hover transition */
+.navbar li:hover {
+  transform: translateY(-3px);
+  font-weight: bold;
+}
+
+/* Main content body */
 .content-card {
   border-radius: 2em;
   margin-top: 5em;
   width: 40em;
-  height: 40rem;
-  border: 1px solid;
+  height: 42rem;
+  border: 2px solid;
   display: flex;
   flex-direction: column;
-  align-items: center; /* aligns content on the opposite axis */
+  align-items: center;
   margin-inline: auto;
 }
 
-.content-card h1, h2,h3 {
+/* Content card text styling */
+.content-card h1, h2, h3 {
   font-family: "Josefin Sans";
   font-style: normal;
+  margin: 10px;
 }
 
+/* Next button styling */
+.btn-next {
+  width: 15em;
+  height: 3em;
+  border: 2px solid;
+  border-radius: 12em;
+  margin-top: 3.5em;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+/* Next button text hover transition */
+.btn-next:hover {
+  transform: translateY(-3px);
+}
+
+/* Remove hyperlink design */
 a {
   color: black;
   text-decoration: none;
