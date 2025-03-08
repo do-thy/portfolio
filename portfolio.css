@@ -40,29 +40,38 @@ a {
       font-weight: bold;
       transform: translateY(-3px);
     }
+  #navbar-link-display {
+    display: flex;
+    font: normal 1em "Inconsolata";
+    margin: 1.05em 4em 0 auto; /* SH: margin-top, margin-right, marin-bottom, margin-left */
+  }
 
-/* Main content body */
-.content-card {
+/* Main content divider */
+.body-divider {
   align-items: center;
-  border: 2px solid;
-  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.index-body-text {
   display: flex;
   flex-direction: column;
-  height: 42rem;
-  margin: 5em auto 0; /* SH for 3 values: margin-top, horizontal (margin-left & margin-right), margin-bottom) */
-  width: 40em;
+  flex-grow: 1;
 }
-  /* Content card text styling */
-  .content-card h1, h2, h3 {
+  /* Main content text styling */
+  .index-body-text h1, h2, h3 {
     font: normal 1em "Josefin Sans"; 
     margin: 10px;
   }
+
+#self-portrait {
+  flex-grow: 0.3;
+}
 
 /* Next button styling */
 .btn-next {
   align-items: center;
   border: 2px solid;
-  border-radius: 12em;
   display: flex;
   height: 3em;
   justify-content: center;
