@@ -1,118 +1,6 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* FIX THE ORDER OF THE CODE! */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body {
   margin: 0;
   padding: 0;
-}
-/* Navigation bar border and position */
-.navbar {
-  width: 100vw;
-  top: 0;
-  left: 0;
-  border-bottom: 2px solid;
-  border-color: black;
-  background-color: #F0DCC4;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: row; /* sets main axis */
-  justify-content: flex-start; /* aligns content on the main axis */
-  align-items: center; /* aligns content on the opposite axis */
-}
-
-/* Flex display somehow enables the animation */
-.navbar ul {
-  display: flex;
-  list-style: none;
-  margin: -15px;
-} 
-
-/* Navigation bar text styling and position */
-.navbar li {
-  padding: 2em;
-  list-style-type: none;
-  display: inline;
-  overflow: hidden;
-  font-family: "Inconsolata";
-  font-style: normal;
-  transition: transform 0.7s;
-}
-
-/* Navigation bar text hover transition */
-.navbar li:hover {
-  transform: translateY(-3px);
-  font-weight: bold;
-}
-
-/* Main content body */
-.content-card {
-  border-radius: 2em;
-  margin-top: 5em;
-  width: 40em;
-  height: 42rem;
-  border: 2px solid;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-inline: auto;
-}
-
-/* Content card text styling */
-.content-card h1, h2, h3 {
-  font-family: "Josefin Sans";
-  font-style: normal;
-  margin: 10px;
-}
-
-/* Next button styling */
-.btn-next {
-  width: 15em;
-  height: 3em;
-  border: 2px solid;
-  border-radius: 12em;
-  margin-top: 3.5em;
-  margin-inline: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s;
-}
-
-/* Next button text hover transition */
-.btn-next:hover {
-  transform: translateY(-3px);
 }
 
 /* Remove hyperlink design */
@@ -121,14 +9,81 @@ a {
   text-decoration: none;
 }
 
-.footer {
-  position: fixed;
+/* Navigation bar style and position */
+.navbar {
+  background-color: #F0DCC4;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: row; /* sets main axis, DEFAULT VALUE - can be truncated */
+  justify-content: flex-start; /* aligns content on the main axis, DEFAULT VALUE - can be truncated */
   left: 0;
-  bottom: 0;
+  top: 0;
   width: 100vw;
-  border-top: 2px solid;
-  border-color: black;
+}
+  /* Flex display enables the transition */
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    margin: -15px;
+  } 
+  /* Navigation bar text styling and position */
+  .navbar li {
+    display: inline;
+    font: normal 1em "Inconsolata"; /* SH: font-style, font-size, font-family */
+    list-style-type: none;
+    overflow: hidden;
+    padding: 2em;
+    transition: transform 0.7s;
+  }
+    /* Navigation bar text hover transition */
+    .navbar li:hover {
+      font-weight: bold;
+      transform: translateY(-3px);
+    }
+
+/* Main content body */
+.content-card {
+  align-items: center;
+  border: 2px solid;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  height: 42rem;
+  margin: 5em auto 0; /* SH for 3 values: margin-top, horizontal (margin-left & margin-right), margin-bottom) */
+  width: 40em;
+}
+  /* Content card text styling */
+  .content-card h1, h2, h3 {
+    font: normal 1em "Josefin Sans"; 
+    margin: 10px;
+  }
+
+/* Next button styling */
+.btn-next {
+  align-items: center;
+  border: 2px solid;
+  border-radius: 12em;
+  display: flex;
+  height: 3em;
+  justify-content: center;
+  margin: 3.5em auto 0; /* SH for 3 values alt: margin-top, margin-inline, margin-bottom */
+  transition: transform 0.3s;
+  width: 15em;
+}
+  /* Next button text hover transition */
+  .btn-next:hover {
+    transform: translateY(-3px);
+  }
+
+/* Footer style and position */
+.footer {
   background-color: #DBB6AD;
+  border-color: black;
+  border-top: 2px solid;
+  bottom: 0;
+  font: normal 1em "Inconsolata";
+  left: 0;
+  position: fixed;
   text-align: center;
-  font-family: "Inconsolata";
+  width: 100vw;
 }
