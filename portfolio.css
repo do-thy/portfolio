@@ -1,4 +1,5 @@
 body {
+  background-color: #DFCAA0;
   margin: 0;
   padding: 0;
 }
@@ -11,13 +12,11 @@ a {
 
 /* Navigation bar style and position */
 .navbar {
-  background-color: #F0DCC4;
+  background-color: #DFCAA0;
   border-bottom: 2px solid black;
   display: flex;
   flex-direction: row; /* sets main axis, DEFAULT VALUE - can be truncated */
   justify-content: flex-start; /* aligns content on the main axis, DEFAULT VALUE - can be truncated */
-  left: 0;
-  top: 0;
   width: 100vw;
 }
   /* Flex display enables the transition */
@@ -28,7 +27,7 @@ a {
   } 
   /* Navigation bar text styling and position */
   .navbar li {
-    display: inline;
+    display: flex;
     font: normal 1em "Inconsolata"; /* SH: font-style, font-size, font-family */
     list-style-type: none;
     overflow: hidden;
@@ -41,10 +40,15 @@ a {
       transform: translateY(-3px);
     }
   #navbar-link-display {
+    align-items: center;
     display: flex;
-    font: normal 1em "Inconsolata";
-    margin: 1.05em 4em 0 auto; /* SH: margin-top, margin-right, marin-bottom, margin-left */
+    flex-grow: 1;
+    justify-content: end;
   }
+    #navbar-link-display h1 {
+      font: normal 1em "Inconsolata";
+      margin-right: 4em;
+    }
 
 /* Main content divider */
 .body-divider {
@@ -59,40 +63,20 @@ a {
   flex-grow: 1;
 }
   /* Main content text styling */
-  .index-body-text h1, h2, h3 {
-    font: normal 1em "Josefin Sans"; 
+  .index-body-text h1 {
+    font: italic bold 1em "Comic Neue"; 
     margin: 10px;
+  }
+  .index-body-text h2 {
+    font: italic 1em "VT323"; 
+    margin: 10px;
+  }
+  .index-body-text span {
+    color: #FFFFFF;
   }
 
 #self-portrait {
-  flex-grow: 0.3;
-}
-
-/* Next button styling */
-.btn-next {
-  align-items: center;
-  border: 2px solid;
-  display: flex;
-  height: 3em;
-  justify-content: center;
-  margin: 3.5em auto 0; /* SH for 3 values alt: margin-top, margin-inline, margin-bottom */
-  transition: transform 0.3s;
-  width: 15em;
-}
-  /* Next button text hover transition */
-  .btn-next:hover {
-    transform: translateY(-3px);
-  }
-
-/* Footer style and position */
-.footer {
-  background-color: #DBB6AD;
-  border-color: black;
-  border-top: 2px solid;
-  bottom: 0;
-  font: normal 1em "Inconsolata";
-  left: 0;
-  position: fixed;
-  text-align: center;
-  width: 100vw;
+  border: 3px solid;
+  border-radius: 1em;
+  box-shadow: 1rem 1rem;
 }
