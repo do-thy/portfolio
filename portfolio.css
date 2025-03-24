@@ -1,10 +1,11 @@
+/* styling for index.html */
 body {
   background-color: #DFCAA0;
   margin: 0;
   padding: 0;
 }
 
-/* Navigation bar style and position */
+/* navigation bar style and position */
 .nav-bar {
   align-items: center;
   background-color: #DFCAA0;
@@ -14,39 +15,41 @@ body {
   justify-content: center; /* aligns content on the main axis, DEFAULT VALUE - can be truncated */
   padding: 0 2em;
   width: 100vw;
+
+  top: 0;
+  position: fixed;
 }
-  /* Remove hyperlink design on nav-bar */
+  /* remove hyperlink design on nav-bar */
   .nav-bar a {
     color: black;
     text-decoration: none;
   }
-  /* Flex display enables the transition */
+  /* flex display enables the transition */
   .nav-bar ul {
     display: flex;
     list-style: none;
   } 
-  /* Navigation bar text styling and position */
+  /* navigation bar text styling and position */
   .nav-bar li {
     display: flex;
-    font: normal 1.2em "Inconsolata"; /* SH: font-style, font-size, font-family */
+    font: normal 1.3em "VT323"; /* SH: font-style, font-size, font-family */
     list-style-type: none;
     overflow: hidden;
     padding: 1em 2em 0em 2em;
     transition: transform 0.7s;
   }
-    /* Navigation bar text hover transition */
+    /* navigation bar text hover transition */
     .nav-bar li:hover {
       font-weight: bold;
       transform: translateY(-3px);
     }
 
-  
-/* Main content divider */
+/* main content divider */
 .body-divider {
   background-color: #DFCAA0;
   align-items: center;
   display: flex;
-  height: 88vh;
+  height: 100vh;
   justify-content: space-evenly;
 }
 
@@ -58,7 +61,7 @@ body {
   flex-grow: 2;
   justify-content: center;
 }
-  /* Main content text styling */
+  /* main content text styling */
   .index-body-text h1 {
     font: italic bold 1em "Comic Neue"; 
     font-size: 5vmax;
@@ -74,13 +77,14 @@ body {
   }
   .index-body-text span {
     color: #FFFFFF;
+    text-shadow: 2px 2px 0 #000000;
   }
 
 .self-portrait-div{
   flex-grow: 1;
   flex-basis: 40%;
   display: flex;
-justify-content: center;
+  justify-content: center;
 }
   #self-portrait {
     border: 3px solid;
@@ -91,16 +95,17 @@ justify-content: center;
     object-fit: cover;
   }
 
-.pseudo-footer{
+/* .pseudo-footer{
   background-color: #DFCAA0;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 #scroll-down-text {
-  font: normal 1.1em "Inconsolata";
+  font: normal 1.3em "VT323";
 }
 
+/*
 .down-arrow {
   animation-direction: alternate;
   animation-duration: 0.6s;
@@ -112,12 +117,51 @@ justify-content: center;
   height: 0;
   width: 0;
 }
-  /* Down arrow animation */
+  /* down arrow animation 
   @keyframes bouncingArrow {
     to{transform: translateY(6px);}
   }
+*/
 
-/* Media query for tablet size and below */
+/* styling for about.html */
+.about_body {
+  background-color: #E0D4CC;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+/* header index based styling for pages other than index */
+.h1_style {
+  color: #000000;
+  font: italic bold 1em "Comic Neue"; 
+  font-size: 5vmax;
+  text-align: center;
+}
+
+#about_card {
+  background-color: #E0D4CC;
+  border: 3px solid #000000;
+}
+  #about_card h2 {
+    color: #000000;
+    font: italic bold 5vmin "Comic Neue";
+    text-align: center;
+  }
+  #about_card p {
+    color: #000000;
+    font: normal 3vmin "Nunito Sans";
+    margin-top: 5px;
+    text-align: justify;
+  }
+
+#about-me-nav-bar {
+  background-color: #E0D4CC;
+}
+
+
+/* media query for tablet size and below */
 @media (max-width: 768px) {
   .body-divider {
     flex-direction: column;
@@ -126,11 +170,11 @@ justify-content: center;
     order: 2;
   }
   .self-portrait-div {
-    margin-top: 5rem;
+    margin-top: 10rem;
     order: 1;
   }
   .nav-bar li {
     font-size: 1em;
     padding: 1em 1.5em 0em 1.5em;
   }
-}  
+}
