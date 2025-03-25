@@ -1,6 +1,6 @@
 /* styling for index.html */
 html, body {
-  background-color: #E0D4CC !important; /* !important forces the color switch */
+  background-color: #9F8383 !important; /* !important forces the color switch */
   margin: 0;
   padding: 0;
 }
@@ -8,7 +8,7 @@ html, body {
 /* navigation bar style and position */
 .nav-bar {
   align-items: center;
-  background-color: #DFCAA0;
+  background-color: #574964;
   border-bottom: 2px solid black;
   display: flex;
   flex-direction: row; /* sets main axis, DEFAULT VALUE - can be truncated */
@@ -21,7 +21,7 @@ html, body {
 }
   /* remove hyperlink design on nav-bar */
   .nav-bar a {
-    color: black;
+    color: #FFFFFF;
     text-decoration: none;
   }
   /* flex display enables the transition */
@@ -126,7 +126,7 @@ html, body {
 */
 
 /* styling for about.html */
-.about_body {
+.non-index-body {
   background-color: #DFCAA0;
   border-left: 2px solid black;
   border-right: 2px solid black;
@@ -137,27 +137,48 @@ html, body {
 }
 
 /* header index based styling for pages other than index */
-.h1_style {
+.h1-style {
   color: #000000;
   font: italic bold 1em "Comic Neue"; 
   font-size: 5vmax;
   text-align: center;
 }
 
-#about_card {
+#about-card {
   background-color: #E0D4CC;
   border: 3px solid #000000;
+  border-radius: 1em;
+  box-shadow: 1rem 1rem;
 }
-  #about_card h2 {
+  #about-card h2 {
     color: #000000;
     font: italic bold 4vmin "Comic Neue";
     text-align: center;
   }
-  #about_card p {
+  #about-card p {
     color: #000000;
     font: normal 2vmin "Nunito Sans";
     margin-top: 5px;
     text-align: justify;
+  }
+
+.grid-item {
+  align-items: center;
+  border: 3px solid #000000;
+  border-radius: 1em;
+  box-shadow: 1rem 1rem;
+  background-color: #E0D4CC;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+  .grid-item-big {
+    height: 625px;
+  }
+  .grid-item h2 {
+    color: #000000;
+    font: italic bold 4vmin "Comic Neue";
+    text-align: center;
   }
 
 /* media query for tablet size and below */
@@ -176,10 +197,17 @@ html, body {
     font-size: 1em;
     padding: 1em 1.5em 0em 1.5em;
   }
+  .grid-item {
+    height: 150px;
+  }
+  .grid-item-big {
+    height: 300px;
+  }
 }
 
+/* media query for about p font-size */
 @media (max-width: 600px) {
-  #about_card p {
+  #about-card p {
     font-size: 3vmin;
   }
 }
