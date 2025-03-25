@@ -1,6 +1,6 @@
 /* styling for index.html */
-body {
-  background-color: #DFCAA0;
+html, body {
+  background-color: #E0D4CC !important; /* !important forces the color switch */
   margin: 0;
   padding: 0;
 }
@@ -47,6 +47,8 @@ body {
 /* main content divider */
 .body-divider {
   background-color: #DFCAA0;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
   align-items: center;
   display: flex;
   height: 100vh;
@@ -90,7 +92,7 @@ body {
     border: 3px solid;
     border-radius: 1em;
     box-shadow: 1rem 1rem;
-    max-width: 40%;
+    max-width: 60%;
     min-width: 13rem;
     object-fit: cover;
   }
@@ -125,7 +127,9 @@ body {
 
 /* styling for about.html */
 .about_body {
-  background-color: #E0D4CC;
+  background-color: #DFCAA0;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -146,20 +150,15 @@ body {
 }
   #about_card h2 {
     color: #000000;
-    font: italic bold 5vmin "Comic Neue";
+    font: italic bold 4vmin "Comic Neue";
     text-align: center;
   }
   #about_card p {
     color: #000000;
-    font: normal 3vmin "Nunito Sans";
+    font: normal 2vmin "Nunito Sans";
     margin-top: 5px;
     text-align: justify;
   }
-
-#about-me-nav-bar {
-  background-color: #E0D4CC;
-}
-
 
 /* media query for tablet size and below */
 @media (max-width: 768px) {
@@ -176,5 +175,11 @@ body {
   .nav-bar li {
     font-size: 1em;
     padding: 1em 1.5em 0em 1.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  #about_card p {
+    font-size: 3vmin;
   }
 }
