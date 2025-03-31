@@ -172,12 +172,27 @@ html, body {
     height: 625px;
   }
 
+#contact-card {
+  background-color: #E0D4CC;
+  border: 3px solid #000000;
+  border-radius: 1em;
+  box-shadow: 1rem 1rem;
+}
+  #contact-card p {
+    color: #000000;
+    font: normal 2vmin "Nunito Sans";
+    margin-top: 5px;
+    text-align: justify;
+  }
+
 /* media query for tablet size and below */
 @media (max-width: 768px) {
-  .body-divider {
+  .index-body {
     flex-direction: column;
   }
   .index-body-text {
+    justify-content: start;
+    margin-top: 5rem;
     order: 2;
   }
   .self-portrait-div {
