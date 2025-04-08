@@ -12,16 +12,23 @@ html, body {
   justify-content: center;
 }
 
+.background-texture {
+  -webkit-mask-image: url("background-texture.png");
+  mask-image: url("background-texture.png");
+}
+
+
+
 /* header index based class styling because just using selector does not work for some properties */
 .h1-style {
   color: #000000;
-  font: italic bold 5vmax "Comic Neue"; 
+  font: italic bold 5vmax "Space Mono"; 
   text-align: center;
 }
 
 .h2-style {
   color: #000000;
-  font: italic bold 4vmin "Comic Neue";
+  font: italic bold 4vmin "Edu AU VIC WA NT Dots";
   text-align: center;
 }
 
@@ -82,13 +89,15 @@ html, body {
   justify-content: center;
 }
   .index-body-text h1 {
-    font: italic bold 1em "Comic Neue"; 
+    color: #000000; 
+    font: bold 1em "Space Mono";
     font-size: 5vmax;
     margin: 5px;
     max-width: 80%;
     text-align: center;
   }
   .index-body-text h2 {
+    color: #000000; 
     font: italic 1em "VT323"; 
     font-size: 2em;
     margin: 0;
@@ -107,7 +116,6 @@ html, body {
 }
   #self-portrait {
     border: 3px solid;
-    border-radius: 1em;
     box-shadow: 1rem 1rem;
     max-width: 60%;
     min-width: 13rem;
@@ -147,12 +155,12 @@ html, body {
 #about-card {
   background-color: #E0D4CC;
   border: 3px solid #000000;
-  border-radius: 1em;
+  border-radius: 0;
   box-shadow: 1rem 1rem;
 }
   #about-card p {
     color: #000000;
-    font: normal 2vmin "Nunito Sans";
+    font: normal 2vmin "Space Mono";
     margin-top: 5px;
     text-align: justify;
   }
@@ -160,7 +168,6 @@ html, body {
 .grid-item {
   align-items: center;
   border: 3px solid #000000;
-  border-radius: 1em;
   box-shadow: 1rem 1rem;
   background-color: #E0D4CC;
   display: flex;
@@ -174,12 +181,11 @@ html, body {
 #contact-card {
   background-color: #E0D4CC;
   border: 3px solid #000000;
-  border-radius: 1em;
   box-shadow: 1rem 1rem;
 }
   #contact-card p {
     color: #000000;
-    font: normal 2vmin "Nunito Sans";
+    font: normal 2vmin "Space Mono";
     margin-top: 5px;
     text-align: justify;
   }
