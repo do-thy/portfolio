@@ -1,13 +1,11 @@
 /* universal styling */
 html, body {
-  background-color: #9F8383 !important; /* !important forces the color switch */
+  background-color: #DFCAA0 !important; /* !important forces the color switch */
   margin: 0;
   padding: 0;
 }
 .body-style {
   background-color: #DFCAA0;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -29,8 +27,9 @@ html, body {
 
 .nav-bar {
   align-items: center;
-  background-color: #574964;
+  background-color: #DFCAA0;
   border-bottom: 2px solid black;
+  border-top: 2px solid black;
   display: flex;
   flex-direction: row; /* sets main axis, DEFAULT VALUE - can be truncated */
   justify-content: center; /* aligns content on the main axis, DEFAULT VALUE - can be truncated */
@@ -41,7 +40,7 @@ html, body {
 }
   /* remove hyperlink design on nav-bar */
   .nav-bar a {
-    color: #FFFFFF;
+    color: #000000;
     text-decoration: none;
   }
   /* flex display enables the transition */
