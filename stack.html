@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <nav>
   <div class="nav-bar">
@@ -21,25 +22,73 @@
   </div>
 </nav>
 <body>
-  <div class="container body-style">
+  <div class="container body-style stack-body">
     <h1 class="h1-style mt-5 mb-1">Stack</h1>
-    <div class="row g-4 mx-5">
-      <div class="col-md-6"> <!-- consumes 6/12 when in medium screens -->
-        <div class="row g-4"> <!-- second grid row to stack two "cards" -->
-          <div class="col-12">
-            <div class="grid-item">
-              <h2 class="h2-style">Languages</h2>
+    <div class="row g-4 mx-5">      
+      <div class="col-md-6">
+        <div class="grid-item">
+          <h2 class="h2-style">Languages</h2>
+          <div class="stack-item-container">
+            <div class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg">
+              <span>C</span>
             </div>
-          </div>
-          <div class="col-12">
-            <div class="grid-item">
-              <h2 class="h2-style">Development Tools</h2>
+            <div class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg">
+              <span>Java</span>
+            </div>
+            <div class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg">
+              <span>JavaScript</span>
+            </div>
+            <div class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg">
+              <span>CSS</span>
+            </div>
+            <div class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg">
+              <span>HTML</span>
+            </div>
+            <div class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xml/xml-original.svg">
+              <span>XML</span>
+            </div>
+            <div class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg">
+              <span>SQL</span>
             </div>
           </div>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="grid-item grid-item-big">
+        <div class="grid-item">
+          <h2 class="h2-style">Development Tools</h2>
+          <div class="stack-item-container">
+            <div class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg">
+              <span>VS Code</span>
+            </div>
+            <div class="stack-item">
+              <img src="media/devicons/netbeans-logo.png">
+              <span>Apache NetBeans</span>
+            </div>
+            <div class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg">
+              <span>Android Studio</span>
+            </div>
+            <div class="stack-item">
+              <img src="media/devicons/oracle-apex-logo.avif">
+              <span>Oracle APEX</span>
+            </div>
+            <div class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg">
+              <span>Git</span>
+            </div>
+          </div>
+        </div>
+      </div>   
+      <div class="col-md-12">
+        <div class="grid-item">
           <h2 class="h2-style">Certifications</h2>
         </div>
       </div>
@@ -47,7 +96,7 @@
   </div>
 </body>
 <footer>
-  <div class="footer">
+  <div class="footer stack-footer">
     <div class="footer-split">
       <div class="left-arrow arrow-animation"></div>
       <h1 id="footer-text"><a href="about.html">Previous Page</a></h1>
@@ -59,3 +108,4 @@
   </div>
 </footer>
 </html>
+
