@@ -13,9 +13,19 @@ html, body {
   justify-content: center;
 }
 
-.background-texture {
-  -webkit-mask-image: url("background-texture.png");
-  mask-image: url("background-texture.png");
+.footer {
+  align-items: center;
+  background-color: #DFCAA0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-split {
+  align-items: center;
+  background-color: #DFCAA0;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 #footer-text {
@@ -27,20 +37,33 @@ html, body {
   }
 
 .right-arrow {
-  animation-direction: alternate;
-  animation-duration: 0.6s;
-  animation-iteration-count: infinite;
-  animation-name: bouncingArrow;
+  animation-name: bouncingRightArrow;
   border-bottom: 8px solid transparent;
   border-left: 10px solid #000000;
   border-top: 8px solid transparent;
-  height: 0;
-  margin-left: 0.8em;
   margin-bottom: 8px;
-  width: 0;
+  margin-left: 0.8em;
 }
-  @keyframes bouncingArrow {
+
+.left-arrow {
+  animation-name: bouncingLeftArrow;
+  border-bottom: 8px solid transparent;
+  border-right: 10px solid #000000;
+  border-top: 8px solid transparent;
+  margin-bottom: 8px;
+  margin-right: 0.8em;
+}
+
+.arrow-animation {
+  animation-direction: alternate;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+}
+  @keyframes bouncingRightArrow {
     to{transform: translateX(6px);}
+  }
+  @keyframes bouncingLeftArrow {
+    to{transform: translateX(-6px);}
   }
 
 /* header index based class styling because just using selector does not work for some properties */
@@ -68,6 +91,7 @@ html, body {
   width: 100vw;
   top: 0;
   position: fixed;
+  z-index: 999;
 }
   /* remove hyperlink design on nav-bar */
   .nav-bar a {
@@ -131,15 +155,6 @@ html, body {
     color: #FFFFFF;
     text-shadow: 2px 2px 0 #000000;
   }
-
-.index-footer{
-  align-items: center;
-  background-color: #DFCAA0;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-} 
 
 .self-portrait-div{
   flex-grow: 1;
@@ -229,5 +244,8 @@ html, body {
 @media (max-width: 600px) {
   #about-card p {
     font-size: 3vmin;
+  }
+  .footer {
+    margin-bottom: 2em;
   }
 }
