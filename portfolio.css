@@ -201,6 +201,7 @@ html, body {
   background-color: #E0D4CC;
   display: flex;
   flex-direction: column;
+
 }
 
 .stack-item-container {
@@ -210,6 +211,13 @@ html, body {
   justify-content: center;
   gap: 2em;
   padding: 0.5em 1em 2em;
+}
+
+.stack-spacer {
+  background-color: #DFCAA0;
+  height: 10em;
+  margin-top: 5em;
+  width: 100vw;
 }
 
 .stack-item {
@@ -245,6 +253,7 @@ html, body {
 /* media query for tablet size and below */
 @media (max-width: 768px) {
   body {
+    padding-bottom: 2em;
     padding-top: 2em;
   }
   .index-body {
