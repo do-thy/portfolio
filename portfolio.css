@@ -127,6 +127,13 @@ html, body {
       transform: translateY(-3px);
     }
 
+.spacing-element {
+  background-color: #DFCAA0;
+  height: 10em;
+  margin-top: 5em;
+  width: 100vw;
+}
+
 /* styling for index.html */
 /* navigation bar style and position */
 
@@ -194,6 +201,10 @@ html, body {
     text-align: justify;
   }
 
+.about-spacing-element {
+  display: none;
+}
+
 .grid-item {
   align-items: center;
   border: 3px solid #000000;
@@ -211,13 +222,6 @@ html, body {
   justify-content: center;
   gap: 2em;
   padding: 0.5em 1em 2em;
-}
-
-.stack-spacer {
-  background-color: #DFCAA0;
-  height: 10em;
-  margin-top: 5em;
-  width: 100vw;
 }
 
 .stack-item {
@@ -275,6 +279,9 @@ html, body {
   #about-gap {
     margin-top: 10em;
     margin-bottom: 5em;
+  }
+  .about-spacing-element {
+    display: block;
   }
   .stack-body {
     margin-top: 10em;
