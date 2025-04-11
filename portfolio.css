@@ -16,8 +16,16 @@ html, body {
 .footer {
   align-items: center;
   background-color: #DFCAA0;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  bottom: 0;
   display: flex;
   justify-content: center;
+  left: 0;
+  padding: 4px 2em;
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
 }
 
 .footer-split {
@@ -87,10 +95,11 @@ html, body {
   display: flex;
   flex-direction: row; /* sets main axis, DEFAULT VALUE - can be truncated */
   justify-content: center; /* aligns content on the main axis, DEFAULT VALUE - can be truncated */
+  left: 0;
   padding: 0 2em;
+  position: fixed;
   width: 100vw;
   top: 0;
-  position: fixed;
   z-index: 999;
 }
   /* remove hyperlink design on nav-bar */
@@ -238,9 +247,6 @@ html, body {
   body {
     padding-top: 2em;
   }
-  .stack-footer {
-    margin-top: 10em;
-  }
   .index-body {
     flex-direction: column;
   }
@@ -270,8 +276,5 @@ html, body {
 @media (max-width: 600px) {
   #about-card p {
     font-size: 3vmin;
-  }
-  .footer {
-    margin-bottom: 2em;
   }
 }
