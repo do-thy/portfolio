@@ -134,6 +134,13 @@ html, body {
   width: 100vw;
 }
 
+.spacing-element-big {
+  background-color: #DFCAA0;
+  height: 35em;
+  margin-top: 5em;
+  width: 100vw;
+}
+
 /* styling for index.html */
 /* navigation bar style and position */
 
@@ -212,7 +219,6 @@ html, body {
   background-color: #E0D4CC;
   display: flex;
   flex-direction: column;
-
 }
 
 .stack-item-container {
@@ -240,6 +246,27 @@ html, body {
   margin-right: 0.8rem;
   width: 2rem;
 }
+
+.stack-item-container-big {
+  flex-direction: column;
+}
+
+.stack-item-big img {
+  height: 10rem;
+  margin-right: 2rem;
+  width: 10rem;
+}
+
+.certification-text-div {
+  display: flex;
+  flex-direction: column;
+}
+  .certification-text-small {
+    font: normal 2vmin "Space Mono"
+  }
+  .certification-text-small a {
+    color: #000000;
+  }
 
 #contact-card {
   background-color: #E0D4CC;
@@ -285,6 +312,11 @@ html, body {
   }
   .stack-body {
     margin-top: 10em;
+  }
+  .stack-item-big img {
+    height: 7rem;
+    margin-right: 1.4rem;
+    width: 7rem;
   }
 }
 
