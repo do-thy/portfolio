@@ -314,9 +314,13 @@ html, body {
     margin-top: 10em;
   }
   .stack-item-big img {
-    height: 7rem;
+    height: 3rem;
     margin-right: 1.4rem;
-    width: 7rem;
+    width: 3rem;
+  }
+  .stack-item-container-big {
+    flex-direction: column;
+    padding: 0.2em 0.5em 1em;
   }
 }
 
