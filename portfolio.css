@@ -1,12 +1,17 @@
 /* universal styling */
 html, body {
-  background-color: #DFCAA0 !important; /* !important forces the color switch */
+  background-color: #DFCAA0;
+  background-image: url("media/background.png");
   margin: 0;
   padding: 0;
 }
 
+@view-transition {
+  navigation: auto;
+} 
+
 .body-style {
-  background-color: #DFCAA0;
+  background-image: url("media/background.png");
   display: flex;
   flex-direction: column;
   height: 95vh;
@@ -111,6 +116,8 @@ html, body {
   .nav-bar ul {
     display: flex;
     list-style: none;
+    margin: 0 auto 1em;
+    padding: 0;
   } 
   /* navigation bar text styling and position */
   .nav-bar li {
@@ -129,6 +136,7 @@ html, body {
 
 .spacing-element {
   background-color: #DFCAA0;
+  background-image: url("media/background.png");
   height: 10em;
   margin-top: 5em;
   width: 100vw;
@@ -136,6 +144,7 @@ html, body {
 
 .spacing-element-big {
   background-color: #DFCAA0;
+  background-image: url("media/background.png");
   height: 35em;
   margin-top: 5em;
   width: 100vw;
