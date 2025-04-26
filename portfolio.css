@@ -4,6 +4,7 @@ html, body {
   background-image: url("media/background.png");
   margin: 0;
   padding: 0;
+  padding-top: 1.5em;
 }
 
 @view-transition {
@@ -138,16 +139,14 @@ html, body {
   background-color: #DFCAA0;
   background-image: url("media/background.png");
   height: 10em;
-  margin-top: 5em;
-  width: 100vw;
+  width: 1vw;
 }
 
 .spacing-element-big {
   background-color: #DFCAA0;
   background-image: url("media/background.png");
-  height: 35em;
-  margin-top: 5em;
-  width: 100vw;
+  height: 25em;
+  width: 1vw;
 }
 
 /* styling for index.html */
@@ -246,7 +245,7 @@ html, body {
   box-shadow: 3px 3px;
   color: #000000;
   display: flex;
-  font: normal 2.5vmin "Space Mono";
+  font: normal 3vmin "Space Mono";
   padding: 6px 12px;
 }
 
@@ -271,7 +270,7 @@ html, body {
   flex-direction: column;
 }
   .certification-text-small {
-    font: normal 2vmin "Space Mono"
+    font: normal 2.5vmin "Space Mono"
   }
   .certification-text-small a {
     color: #000000;
@@ -318,9 +317,6 @@ html, body {
   }
   .about-spacing-element {
     display: block;
-  }
-  .stack-body {
-    margin-top: 10em;
   }
   .stack-item-big img {
     height: 3rem;
