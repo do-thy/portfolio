@@ -33,6 +33,7 @@ html, body {
   width: 100vw;
   z-index: 999;
 }
+  
 
 .footer-split {
   align-items: center;
@@ -42,12 +43,20 @@ html, body {
   flex-grow: 1;
 }
 
-#footer-text {
+.footer-text {
   font: normal 1.5em "VT323";
+  transition: transform 0.7s;
 }
-  #footer-text a {
+  .footer-text a {
     color: #000000;
     text-decoration: none;
+  }
+  .footer-text:hover {
+    font-weight: bold;
+    transform: translateX(2px);
+  }
+  #footer-text-left:hover {
+    transform: translateX(-2px);
   }
 
 .right-arrow {
