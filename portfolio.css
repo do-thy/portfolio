@@ -157,6 +157,7 @@ html, body {
 /* main content divider */
 .index-body {
   align-items: center;
+  height: 93vh;
   flex-direction: row;
   justify-content: space-evenly;
 }
@@ -231,7 +232,7 @@ html, body {
   flex-direction: column;
 }
 
-#stack-body {
+#about-stack-body {
   height: auto;
 }
 .stack-item-container {
@@ -294,7 +295,12 @@ html, body {
     text-align: justify;
   }
 
-/* media query for tablet size and below */
+
+@media (max-width: 991px) {
+  .about-spacing-element {
+    display: block;
+  }
+}
 @media (max-width: 768px) {
   body {
     padding-bottom: 2em;
@@ -315,13 +321,6 @@ html, body {
   .nav-bar li {
     font-size: 1em;
     padding: 1em 1.5em 0em 1.5em;
-  }
-  #about-gap {
-    margin-top: 10em;
-    margin-bottom: 5em;
-  }
-  .about-spacing-element {
-    display: block;
   }
   .stack-item-big img {
     height: 3rem;
