@@ -138,14 +138,7 @@ html, body {
 .spacing-element {
   background-color: #DFCAA0;
   background-image: url("media/background.png");
-  height: 10em;
-  width: 1vw;
-}
-
-.spacing-element-big {
-  background-color: #DFCAA0;
-  background-image: url("media/background.png");
-  height: 25em;
+  height: 7em;
   width: 1vw;
 }
 
@@ -229,6 +222,9 @@ html, body {
   flex-direction: column;
 }
 
+#stack-body {
+  height: auto;
+}
 .stack-item-container {
   align-items: center;
   display: flex;
