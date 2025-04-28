@@ -15,7 +15,6 @@ html, body {
   background-image: url("media/background.png");
   display: flex;
   flex-direction: column;
-  height: 95vh;
   justify-content: center;
 }
 
@@ -88,6 +87,10 @@ html, body {
   @keyframes bouncingLeftArrow {
     to{transform: translateX(-6px);}
   }
+
+#current-page a {
+  font-weight: bolder;
+}
 
 /* header index based class styling because just using selector does not work for some properties */
 .h1-style {
@@ -219,7 +222,7 @@ html, body {
     text-align: justify;
   }
 
-.about-spacing-element {
+.responsive-spacing-element {
   display: none;
 }
 
@@ -232,9 +235,6 @@ html, body {
   flex-direction: column;
 }
 
-#about-stack-body {
-  height: auto;
-}
 .stack-item-container {
   align-items: center;
   display: flex;
@@ -297,7 +297,7 @@ html, body {
 
 
 @media (max-width: 991px) {
-  .about-spacing-element {
+  .responsive-spacing-element {
     display: block;
   }
 }
@@ -308,6 +308,7 @@ html, body {
   }
   .index-body {
     flex-direction: column;
+    height: auto;
   }
   .index-body-text {
     justify-content: start;
