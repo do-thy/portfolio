@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Hover effect
+// General hover effect
 document.querySelectorAll('.animate-expand').forEach(btn => {
   btn.addEventListener('mouseenter', () => {
     anime({
@@ -20,7 +20,6 @@ document.querySelectorAll('.animate-expand').forEach(btn => {
       easing: 'easeOutCubic'
     });
   });
-  
   btn.addEventListener('mouseleave', () => {
     anime({
       targets: btn,
@@ -31,7 +30,7 @@ document.querySelectorAll('.animate-expand').forEach(btn => {
   });
 });
 
-// Card lift on hover
+// Big cards hover effect
 document.querySelectorAll('.lift-card').forEach(card => {
   card.addEventListener('mouseenter', () => {
     anime({

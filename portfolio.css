@@ -1,4 +1,5 @@
-/* universal styling */
+/* site-wide styling */
+
 html, body {
   background-color: #DFCAA0;
   background-image: url("media/background.png");
@@ -18,6 +19,60 @@ html, body {
   justify-content: center;
 }
 
+.h1-style {
+  color: #000000;
+  font: italic bold 5vmax "Space Mono"; 
+  text-align: center;
+}
+
+.h2-style {
+  color: #000000;
+  font: italic bold 4vmin "Edu AU VIC WA NT Dots";
+  text-align: center;
+}
+
+.nav-bar {
+  align-items: center;
+  background-color: #DFCAA0;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  left: 0;
+  padding: 0 2em;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-bar a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  margin: 0 auto 1em;
+  padding: 0;
+} 
+
+.nav-bar li {
+  display: flex;
+  font: normal 1.3em "VT323";
+  list-style-type: none;
+  overflow: hidden;
+  padding: 1em 2em 0em 2em;
+  transition: transform 0.7s;
+}
+
+.nav-bar li:hover {
+  font-weight: bold;
+  transform: translateY(-3px);
+}
+
 .footer {
   align-items: center;
   background-color: #DFCAA0;
@@ -32,7 +87,6 @@ html, body {
   width: 100vw;
   z-index: 999;
 }
-  
 
 .footer-split {
   align-items: center;
@@ -46,17 +100,20 @@ html, body {
   font: normal 1.5em "VT323";
   transition: transform 0.7s;
 }
-  .footer-text a {
-    color: #000000;
-    text-decoration: none;
-  }
-  .footer-text:hover {
-    font-weight: bold;
-    transform: translateX(2px);
-  }
-  #footer-text-left:hover {
-    transform: translateX(-2px);
-  }
+
+.footer-text a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer-text:hover {
+  font-weight: bold;
+  transform: translateX(2px);
+}
+
+#footer-text-left:hover {
+  transform: translateX(-2px);
+}
 
 .right-arrow {
   animation-name: bouncingRightArrow;
@@ -92,61 +149,6 @@ html, body {
   font-weight: bolder;
 }
 
-/* header index based class styling because just using selector does not work for some properties */
-.h1-style {
-  color: #000000;
-  font: italic bold 5vmax "Space Mono"; 
-  text-align: center;
-}
-
-.h2-style {
-  color: #000000;
-  font: italic bold 4vmin "Edu AU VIC WA NT Dots";
-  text-align: center;
-}
-
-.nav-bar {
-  align-items: center;
-  background-color: #DFCAA0;
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
-  display: flex;
-  flex-direction: row; /* sets main axis, DEFAULT VALUE - can be truncated */
-  justify-content: center; /* aligns content on the main axis, DEFAULT VALUE - can be truncated */
-  left: 0;
-  padding: 0 2em;
-  position: fixed;
-  width: 100vw;
-  top: 0;
-  z-index: 999;
-}
-  /* remove hyperlink design on nav-bar */
-  .nav-bar a {
-    color: #000000;
-    text-decoration: none;
-  }
-  /* flex display enables the transition */
-  .nav-bar ul {
-    display: flex;
-    list-style: none;
-    margin: 0 auto 1em;
-    padding: 0;
-  } 
-  /* navigation bar text styling and position */
-  .nav-bar li {
-    display: flex;
-    font: normal 1.3em "VT323"; /* SH: font-style, font-size, font-family */
-    list-style-type: none;
-    overflow: hidden;
-    padding: 1em 2em 0em 2em;
-    transition: transform 0.7s;
-  }
-    /* navigation bar text hover transition */
-    .nav-bar li:hover {
-      font-weight: bold;
-      transform: translateY(-3px);
-    }
-
 .spacing-element {
   background-color: #DFCAA0;
   background-image: url("media/background.png");
@@ -154,10 +156,25 @@ html, body {
   width: 1vw;
 }
 
-/* styling for index.html */
-/* navigation bar style and position */
+.responsive-spacing-element {
+  display: none;
+}
 
-/* main content divider */
+.big-card-text-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.big-card-text-small {
+  font: normal 2.5vmin "Space Mono"
+}
+
+.big-card-text-small a {
+  color: #000000;
+}
+
+/* styling for index.html */
+
 .index-body {
   align-items: center;
   height: 93vh;
@@ -173,39 +190,43 @@ html, body {
   flex-grow: 2;
   justify-content: center;
 }
-  .index-body-text h1 {
-    color: #000000; 
-    font: bold 1em "Space Mono";
-    font-size: 5vmax;
-    margin: 5px;
-    max-width: 80%;
-    text-align: center;
-  }
-  .index-body-text h2 {
-    color: #000000; 
-    font: italic 1em "VT323"; 
-    font-size: 2em;
-    margin: 0;
-    text-align: center;
-  }
-  .index-body-text span {
-    color: #FFFFFF;
-    text-shadow: 2px 2px 0 #000000;
-  }
 
-.self-portrait-div{
+.index-body-text h1 {
+  color: #000000; 
+  font: bold 1em "Space Mono";
+  font-size: 5vmax;
+  margin: 5px;
+  max-width: 80%;
+  text-align: center;
+}
+
+.index-body-text h2 {
+  color: #000000; 
+  font: italic 1em "VT323"; 
+  font-size: 2em;
+  margin: 0;
+  text-align: center;
+}
+
+.index-body-text span {
+  color: #FFFFFF;
+  text-shadow: 2px 2px 0 #000000;
+}
+
+.self-portrait-div {
   flex-grow: 1;
   flex-basis: 40%;
   display: flex;
   justify-content: center;
 }
-  #self-portrait {
-    border: 3px solid;
-    box-shadow: 1rem 1rem;
-    max-width: 60%;
-    min-width: 13rem;
-    object-fit: cover;
-  }
+
+#self-portrait {
+  border: 3px solid;
+  box-shadow: 1rem 1rem;
+  max-width: 60%;
+  min-width: 13rem;
+  object-fit: cover;
+}
 
 /* styling for about.html */
 
@@ -215,16 +236,15 @@ html, body {
   border-radius: 0;
   box-shadow: 1rem 1rem;
 }
-  #about-card p {
-    color: #000000;
-    font: normal 2vmin "Space Mono";
-    margin-top: 5px;
-    text-align: justify;
-  }
 
-.responsive-spacing-element {
-  display: none;
+#about-card p {
+  color: #000000;
+  font: normal 2vmin "Space Mono";
+  margin-top: 5px;
+  text-align: justify;
 }
+
+/* styling for stack.html */
 
 .grid-item {
   align-items: center;
@@ -271,16 +291,7 @@ html, body {
   width: 10rem;
 }
 
-.certification-text-div {
-  display: flex;
-  flex-direction: column;
-}
-  .certification-text-small {
-    font: normal 2.5vmin "Space Mono"
-  }
-  .certification-text-small a {
-    color: #000000;
-  }
+/* styling for contact.html */
 
 #contact-card {
   background-color: #E0D4CC;
@@ -288,55 +299,77 @@ html, body {
   border-radius: 0;
   box-shadow: 1rem 1rem;
 }
-  #contact-card p {
-    color: #000000;
-    font: normal 2vmin "Space Mono";
-    margin-top: 5px;
-    text-align: justify;
-  }
 
+#contact-card p {
+  color: #000000;
+  font: normal 2vmin "Space Mono";
+  margin-top: 5px;
+  text-align: justify;
+}
+
+#contact-spacing-element {
+  background-color: #DFCAA0;
+  background-image: url("media/background.png");
+  display: none;
+  height: 7em;
+  width: 1vw;
+}
+
+/* media queries for responsive design */
 
 @media (max-width: 991px) {
   .responsive-spacing-element {
     display: block;
   }
 }
+
 @media (max-width: 768px) {
   body {
     padding-bottom: 2em;
     padding-top: 2em;
   }
+
   .index-body {
     flex-direction: column;
     height: auto;
   }
+
   .index-body-text {
     justify-content: start;
     margin-top: 5rem;
     order: 2;
   }
+
   .self-portrait-div {
     margin-top: 10rem;
     order: 1;
   }
+
   .nav-bar li {
     font-size: 1em;
     padding: 1em 1.5em 0em 1.5em;
   }
+
   .stack-item-big img {
     height: 3rem;
     margin-right: 1.4rem;
     width: 3rem;
   }
+
   .stack-item-container-big {
     flex-direction: column;
     padding: 0.2em 0.5em 1em;
   }
 }
 
-/* media query for about p font-size */
 @media (max-width: 600px) {
   #about-card p {
     font-size: 3vmin;
+  }
+}
+
+@media (max-height: 790px) {
+  #contact-spacing-element {
+    display: block;
   }
 }
