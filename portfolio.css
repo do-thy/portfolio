@@ -293,6 +293,16 @@ html, body {
   width: 10rem;
 }
 
+/* styling for projects.html */
+
+.ngayona-habit-card {
+  align-self: center;
+  border: 3px solid #000000;
+  border-radius: 0;
+  box-shadow: 6px 6px;
+  width: 25%;
+}
+
 /* styling for contact.html */
 
 #contact-card {
@@ -361,6 +371,10 @@ html, body {
   .stack-item-container-big {
     flex-direction: column;
     padding: 0.2em 0.5em 1em;
+  }
+
+  .ngayona-habit-card {
+    width: 50%;
   }
 }
 
