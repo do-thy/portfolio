@@ -8,9 +8,10 @@ html, body {
   padding-top: 1.5em;
 }
 
-@view-transition {
-  navigation: auto;
-} 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4em;
+}
 
 .body-style {
   background-image: url("media/background.png");
@@ -75,91 +76,12 @@ html, body {
   transform: translateY(-3px);
 }
 
-.footer {
-  align-items: center;
-  background-color: #DFCAA0;
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  left: 0;
-  padding: 4px 2em;
-  position: fixed;
-  width: 100vw;
-  z-index: 999;
-}
-
-.footer-split {
-  align-items: center;
-  background-color: #DFCAA0;
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-}
-
-.footer-text {
-  font: normal 1.5em "VT323";
-  transition: transform 0.7s;
-}
-
-.footer-text a {
-  color: #000000;
-  text-decoration: none;
-}
-
-.footer-text:hover {
-  font-weight: bold;
-  transform: translateX(2px);
-}
-
-#footer-text-left:hover {
-  transform: translateX(-2px);
-}
-
-.right-arrow {
-  animation-name: bouncingRightArrow;
-  border-bottom: 8px solid transparent;
-  border-left: 10px solid #000000;
-  border-top: 8px solid transparent;
-  margin-bottom: 8px;
-  margin-left: 0.8em;
-}
-
-.left-arrow {
-  animation-name: bouncingLeftArrow;
-  border-bottom: 8px solid transparent;
-  border-right: 10px solid #000000;
-  border-top: 8px solid transparent;
-  margin-bottom: 8px;
-  margin-right: 0.8em;
-}
-
-.arrow-animation {
-  animation-direction: alternate;
-  animation-duration: 0.6s;
-  animation-iteration-count: infinite;
-}
-  @keyframes bouncingRightArrow {
-    to{transform: translateX(6px);}
-  }
-  @keyframes bouncingLeftArrow {
-    to{transform: translateX(-6px);}
-  }
-
-#current-page a {
+.current-page a {
   font-weight: bolder;
 }
 
-.spacing-element {
-  background-color: #DFCAA0;
-  background-image: url("media/background.png");
-  height: 7em;
-  width: 1vw;
-}
-
-.responsive-spacing-element {
-  display: none;
+.page-section {
+  padding-bottom: 4em;
 }
 
 .big-card-text-div {
@@ -175,7 +97,7 @@ html, body {
   color: #000000;
 }
 
-/* styling for index.html */
+/* styling for home section */
 
 .index-body {
   align-items: center;
@@ -230,7 +152,7 @@ html, body {
   object-fit: cover;
 }
 
-/* styling for about.html */
+/* styling for about section */
 
 #about-card {
   background-color: #E0D4CC;
@@ -246,7 +168,7 @@ html, body {
   text-align: justify;
 }
 
-/* styling for stack.html */
+/* styling for stack section */
 
 .grid-item {
   align-items: center;
@@ -293,7 +215,7 @@ html, body {
   width: 10rem;
 }
 
-/* styling for projects.html */
+/* styling for projects section */
 
 .ngayona-habit-card {
   align-self: center;
@@ -303,7 +225,7 @@ html, body {
   width: 25%;
 }
 
-/* styling for contact.html */
+/* styling for contact section */
 
 #contact-card {
   background-color: #E0D4CC;
@@ -319,21 +241,7 @@ html, body {
   text-align: justify;
 }
 
-#contact-spacing-element {
-  background-color: #DFCAA0;
-  background-image: url("media/background.png");
-  display: none;
-  height: 7em;
-  width: 1vw;
-}
-
 /* media queries for responsive design */
-
-@media (max-width: 991px) {
-  .responsive-spacing-element {
-    display: block;
-  }
-}
 
 @media (max-width: 768px) {
   body {
@@ -381,11 +289,5 @@ html, body {
 @media (max-width: 600px) {
   #about-card p {
     font-size: 3vmin;
-  }
-}
-
-@media (max-height: 790px) {
-  #contact-spacing-element {
-    display: block;
   }
 }

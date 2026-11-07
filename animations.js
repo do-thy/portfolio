@@ -30,6 +30,28 @@ document.querySelectorAll('.animate-expand').forEach(btn => {
   });
 });
 
+const sections = document.querySelectorAll('section');
+const navItems = document.querySelectorAll('.nav-bar li');
+
+function updateCurrentPage() {
+  const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+  let currentIndex = 0;
+  sections.forEach((section, index) => {
+    if (section.getBoundingClientRect().top <= window.innerHeight / 3) {
+      currentIndex = index;
+    }
+  });
+  if (atBottom) {
+    currentIndex = sections.length - 1;
+  }
+  navItems.forEach((item, index) => {
+    item.classList.toggle('current-page', index === currentIndex);
+  });
+}
+
+window.addEventListener('scroll', updateCurrentPage);
+window.addEventListener('DOMContentLoaded', updateCurrentPage);
+
 // Big cards hover effect
 document.querySelectorAll('.lift-card').forEach(card => {
   card.addEventListener('mouseenter', () => {
