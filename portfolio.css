@@ -97,6 +97,10 @@ html {
   color: #000000;
 }
 
+.big-card-text-smaller {
+  font: normal 2vmin "Space Mono";
+}
+
 /* styling for home section */
 
 .index-body {
@@ -209,6 +213,20 @@ html {
   flex-direction: column;
 }
 
+.stack-item-container-split {
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.stack-item-column {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 2em;
+  min-width: 0;
+}
+
 .stack-item-big img {
   height: 10rem;
   margin-right: 2rem;
@@ -279,6 +297,16 @@ html {
   .stack-item-container-big {
     flex-direction: column;
     padding: 0.2em 0.5em 1em;
+  }
+
+  .stack-item-container-split {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 0.2em 0.5em 1em;
+  }
+
+  .stack-item-column {
+    flex: none;
   }
 
   .ngayona-habit-card {
