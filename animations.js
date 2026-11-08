@@ -73,3 +73,37 @@ document.querySelectorAll('.lift-card').forEach(card => {
     });
   });
 });
+
+// Expand carousel images in a viewer on click, with previous/next navigation
+const imageViewerEl = document.getElementById('image-viewer');
+if (imageViewerEl) {
+  const imageViewer = new bootstrap.Modal(imageViewerEl);
+  const viewerImg = document.getElementById('image-viewer-img');
+  let viewerImages = [];
+  let viewerIndex = 0;
+
+  function showViewerImage(index) {
+    viewerIndex = (index + viewerImages.length) % viewerImages.length;
+    viewerImg.src = viewerImages[viewerIndex].src;
+    viewerImg.alt = viewerImages[viewerIndex].alt;
+  }
+
+  document.querySelectorAll('#projects .carousel').forEach(carousel => {
+    const images = Array.from(carousel.querySelectorAll('.carousel-item img'));
+    images.forEach((img, i) => {
+      img.addEventListener('click', () => {
+        viewerImages = images;
+        showViewerImage(i);
+        imageViewer.show();
+      });
+    });
+  });
+
+  imageViewerEl.querySelector('.image-viewer-prev').addEventListener('click', () => showViewerImage(viewerIndex - 1));
+  imageViewerEl.querySelector('.image-viewer-next').addEventListener('click', () => showViewerImage(viewerIndex + 1));
+
+  imageViewerEl.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') showViewerImage(viewerIndex - 1);
+    if (e.key === 'ArrowRight') showViewerImage(viewerIndex + 1);
+  });
+}
