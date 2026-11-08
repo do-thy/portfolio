@@ -90,7 +90,7 @@ html {
 }
 
 .big-card-text-small {
-  font: normal 2vmin "Space Mono"
+  font: normal clamp(0.9rem, 2vmin, 1.05rem) "Space Mono"
 }
 
 .big-card-text-small a {
@@ -98,7 +98,7 @@ html {
 }
 
 .big-card-text-smaller {
-  font: normal 1.7vmin "Space Mono";
+  font: normal clamp(0.9rem, 1.7vmin, 1.05rem) "Space Mono";
 }
 
 /* styling for home section */
@@ -156,6 +156,44 @@ html {
   object-fit: cover;
 }
 
+.hero-tagline {
+  color: #000000;
+  font: normal clamp(0.9rem, 2vmin, 1.1rem) "Space Mono";
+  margin: 1rem 0 0;
+  text-align: center;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.hero-button {
+  background-color: #E0D4CC;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px;
+  color: #000000;
+  font: bold clamp(0.9rem, 2vmin, 1.05rem) "Space Mono";
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  transform: translateY(-3px);
+}
+
+.hero-button:focus-visible,
+.nav-bar a:focus-visible,
+.projects-tabs .nav-link:focus-visible {
+  outline: 3px solid #000000;
+  outline-offset: 3px;
+}
 /* styling for about section */
 
 #about-card {
@@ -199,7 +237,7 @@ html {
   box-shadow: 3px 3px;
   color: #000000;
   display: flex;
-  font: normal 2.2vmin "Space Mono";
+  font: normal clamp(0.95rem, 2.2vmin, 1.1rem) "Space Mono";
   padding: 5px 10px;
 }
 
@@ -249,7 +287,7 @@ section.showcase .projects-tabs .nav-link {
   border-radius: 0;
   box-shadow: 3px 3px;
   color: #000000;
-  font: normal 2.2vmin "Space Mono";
+  font: normal clamp(0.95rem, 2.2vmin, 1.1rem) "Space Mono";
   padding: 5px 10px;
   transition: transform 0.3s;
 }
@@ -301,9 +339,9 @@ section.showcase .project-description-card .card-body {
 
 section.showcase .project-description-card p {
   color: #000000;
-  font: normal 2vmin "Space Mono";
+  font: normal clamp(0.9rem, 2vmin, 1.05rem) "Space Mono";
   margin-top: 5px;
-  text-align: justify;
+  text-align: left;
 }
 /* carousel controls: high-contrast square buttons in the site's style */
 
@@ -454,9 +492,9 @@ section.showcase .image-viewer.single-image .image-viewer-nav {
 
 #contact-card p {
   color: #000000;
-  font: normal 2vmin "Space Mono";
+  font: normal clamp(0.9rem, 2vmin, 1.05rem) "Space Mono";
   margin-top: 5px;
-  text-align: justify;
+  text-align: left;
 }
 
 /* media queries for responsive design */
@@ -526,13 +564,12 @@ section.showcase .image-viewer.single-image .image-viewer-nav {
 }
 
 @media (max-width: 600px) {
-  #about-card p,
-  section.showcase .project-description-card .card-body {
-  justify-content: center;
-}
-
-section.showcase .project-description-card p {
+  #about-card p {
     font-size: 3vmin;
+  }
+
+  section.showcase .project-description-card p {
+    font-size: 0.95rem;
   }
 
   section.showcase .projects-tabs {
@@ -540,6 +577,31 @@ section.showcase .project-description-card p {
   }
 
   section.showcase .projects-tabs .nav-link {
-    font-size: 2.8vmin;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-bar {
+    padding: 0 0.5em;
+  }
+
+  .nav-bar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0.6em;
+  }
+
+  .nav-bar li {
+    font-size: 1em;
+    padding: 0.5em 0.8em 0em 0.8em;
+  }
+
+  html {
+    scroll-padding-top: 7em;
+  }
+
+  body {
+    padding-top: 5.5em;
   }
 }
