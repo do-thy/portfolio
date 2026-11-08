@@ -75,10 +75,11 @@ document.querySelectorAll('.lift-card').forEach(card => {
 });
 
 // Expand carousel images in a viewer on click, with previous/next navigation
-const imageViewerEl = document.getElementById('image-viewer');
-if (imageViewerEl) {
-  const imageViewer = new bootstrap.Modal(imageViewerEl);
-  const viewerImg = document.getElementById('image-viewer-img');
+document.querySelectorAll('section.showcase').forEach(section => {
+  const viewerEl = section.querySelector('.image-viewer');
+  if (!viewerEl) return;
+  const viewer = new bootstrap.Modal(viewerEl);
+  const viewerImg = viewerEl.querySelector('.image-viewer-img');
   let viewerImages = [];
   let viewerIndex = 0;
 
@@ -86,24 +87,25 @@ if (imageViewerEl) {
     viewerIndex = (index + viewerImages.length) % viewerImages.length;
     viewerImg.src = viewerImages[viewerIndex].src;
     viewerImg.alt = viewerImages[viewerIndex].alt;
+    viewerEl.classList.toggle('single-image', viewerImages.length < 2);
   }
 
-  document.querySelectorAll('#projects .carousel').forEach(carousel => {
+  section.querySelectorAll('.carousel').forEach(carousel => {
     const images = Array.from(carousel.querySelectorAll('.carousel-item img'));
     images.forEach((img, i) => {
       img.addEventListener('click', () => {
         viewerImages = images;
         showViewerImage(i);
-        imageViewer.show();
+        viewer.show();
       });
     });
   });
 
-  imageViewerEl.querySelector('.image-viewer-prev').addEventListener('click', () => showViewerImage(viewerIndex - 1));
-  imageViewerEl.querySelector('.image-viewer-next').addEventListener('click', () => showViewerImage(viewerIndex + 1));
+  viewerEl.querySelector('.image-viewer-prev').addEventListener('click', () => showViewerImage(viewerIndex - 1));
+  viewerEl.querySelector('.image-viewer-next').addEventListener('click', () => showViewerImage(viewerIndex + 1));
 
-  imageViewerEl.addEventListener('keydown', e => {
+  viewerEl.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft') showViewerImage(viewerIndex - 1);
     if (e.key === 'ArrowRight') showViewerImage(viewerIndex + 1);
   });
-}
+});
